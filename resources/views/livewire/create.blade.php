@@ -22,8 +22,13 @@
                 <div class="mb-2">
                     <label for="title" class="block">Customer Name</label>
                     <input wire:model="title" type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-blue-900" placeholder="Input Name">
-                    @error('description') <h1 class="text-red-500">{{$message}}</h1>@enderror
+                    @error('title') <h1 class="text-red-500">{{$message}}</h1>@enderror
                 </div>
+                <div class="mb-2">
+                  <label for="phone" class="block">Phone Number</label>
+                  <input wire:model="phone" type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-blue-900" placeholder="Phone Number">
+                  @error('phone') <h1 class="text-red-500">{{$message}}</h1>@enderror
+              </div>
                 <div class="mb-2">
                     <label for="description" class="block">Address</label>
                     <textarea wire:model="description" name="description" class="shadow appearance-none border rounded w-full py-2 px-3 text-blue-900" placeholder="Input Address"></textarea>

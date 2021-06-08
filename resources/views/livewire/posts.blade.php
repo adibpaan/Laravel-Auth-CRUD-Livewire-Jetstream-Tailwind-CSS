@@ -7,7 +7,7 @@
                         </g>
                     </svg>
                 </div>
-
+                <div class="py-12">
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg px-4 py-4">
                     
                     <div class="flex mb-4">
@@ -49,6 +49,7 @@
                             <tr>
                                 <th class="px-4 py-2 text-white w-20">No</th>
                                 <th class="px-4 py-2 text-white w-auto">Customer Name</th>
+                                <th class="px-4 py-2 text-white w-auto">Phone Number</th>
                                 <th class="px-4 py-2 text-white w-auto">Address</th>
                                 <th class="px-4 py-2 text-white w-auto">Action</th>
                             </tr>
@@ -56,10 +57,11 @@
                         <tbody>
                             @foreach($posts as $key=>$post)
                             <tr>          
-                                <td class="px-2 py-3">{{ $posts->firstitem() + $key }}</td>
-                                <td>{{ $post->title }}</td>
+                                <td class="px-8 py-3">{{ $posts->firstitem() + $key }}</td>
+                                <td class="px-16 py-3">{{ $post->title }}</td>
+                                <td class="px-16 py-3">{{ $post->phone }}</td>
                                  <td>{{ $post->description }}</td>
-                                <td>
+                                <td class="px-12 py-3">
                                     <button wire:click="edit({{ $post->id }})" class="bg-blue-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded">
                                     Edit
                                     </button>
@@ -76,10 +78,10 @@
                     </div>
                    
                 </div>
-
+            </div>
                
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
+                {{-- <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
                     <div class="text-center text-sm text-gray-500 sm:text-left">
                         <div class="flex items-center">
                             <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
@@ -103,7 +105,7 @@
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Build v{{ Illuminate\Foundation\Application::VERSION }}
                     </div>
-                </div>
+                </div> --}}
             </div>
 </div>
 
